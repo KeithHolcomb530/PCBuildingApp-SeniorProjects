@@ -1,0 +1,86 @@
+--------------------
+Name: Keith Holcomb
+Date: May 5th, 2025
+Project: PC Building App
+Course: CISS:451 - Senior Projects 001
+Description: PostgreSQL Database Server instructions.
+	These instructions are to install a PostgreSQL database using the .sql file backup,
+	as well as instructions for connecting to the database with the PC Building App application.
+--------------------
+
+
+
+The included .sql file, named "pcBuildingAppPostgreSQLDatabaseBackup.sql",
+is a backup of the entire PC Building App database.
+My project uses a PostgreSQL database server to run the SQL tables, so installing PostgreSQL will be required.
+
+
+
+----- INSTALL POSTGRESQL 17 WITH PGADMIN 4 -----
+To import this backup on a different PC/client, PostgreSQL version 17 must be installed on the device.
+The PostgreSQL download link: https://www.postgresql.org/download/
+
+Make sure to download the PostgreSQL installer for the easiest setup.
+In the PostgreSQL installer, make sure to select to install each of the following:
+	PostgreSQL Server
+	pgAdmin 4
+	Stack Builder
+	Command Line Tools
+	
+pgAdmin 4 is especially important, as it is an application that can manage the PostgreSQL Server.
+
+
+
+----- CREATE A NEW DATABASE IN PGADMIN 4 -----
+Once everything is installed, open the pgAdmin 4 application located within the installed directory.
+For me, the application would be found here:
+	"C:\Program Files\PostgreSQL\17\pgAdmin 4\runtime\pgAdmin4.exe"
+
+Within the pgAdmin 4 UI, there should be a drop-down, starting with 'Servers'.
+Go ahead and access the drop-down to see the 'Databases':
+	Servers
+		^ PostgreSQL 17
+			^ Databases
+			
+Right click on 'Databases' and click to 'Create' -> 'Database...'
+A window will popup, go ahead and give the database the name "pcbuildingapp" and save it.
+	(May be able to get away with naming it something else, but the import might require the same database name.)
+
+
+
+----- IMPORT .SQL BACKUP TO DATABASE -----
+Right click on the newly created database and select the 'Restore...' option.
+Under the 'Filename', click the folder icon to select the included .sql file,
+"pcBuildingAppPostgreSQLDatabaseBackup.sql".
+
+After selecting the .sql file, click the 'Restore' button.
+
+pgAdmin 4 should go through the process of loading the database from the backup.
+
+
+
+----- CHECKING WITHIN PC BUILDING APP -----
+When attempting to run the PC Building App project,
+the class named 'PostgreSQLController' holds static functions to connecting to the database.
+
+These functions are located towards the top of the 'PostgreSQLController'
+are getUrl(), getUser(), and getPass().
+
+By default, these functions should be as follows:
+	private static String getUrl() { return "jdbc:postgresql://localhost:5432/pcbuildingapp"; }
+    private static String getUser() { return "pcbuildingapp_user"; }
+    private static String getPass() { return "PCBuildingApp246!"; }
+
+The url, user or pass may need to be changed depending
+on how the PostgreSQL server is running on the computer.
+If the link to the database is different, the getUrl() function will need to be adjusted.
+
+The getUser() and getPass() are accessing
+a user I created for the application to have read/write access to the database.
+If the backup did not also backup the database user I created,
+updating the getUrl() and getPass() functions may be required.
+
+If the provided getUser() and getPass() do not allow access to the database,
+changing these to a username and password that has access to the database created on the computer should work.
+
+

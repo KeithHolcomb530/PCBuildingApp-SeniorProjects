@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ButtonBar?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="720.0" prefWidth="1280.0" style="-fx-border-color: #000000; -fx-border-width: 2;" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="keith.pcbuildingappproject.MenuController">
+   <top>
+      <ButtonBar nodeOrientation="RIGHT_TO_LEFT" prefHeight="71.0" prefWidth="1280.0" style="-fx-background-color: #2d77c2; -fx-border-color: #000000; -fx-border-width: 1;" BorderPane.alignment="TOP_CENTER">
+        <buttons>
+            <Button fx:id="logoutButton" alignment="CENTER" mnemonicParsing="false" onAction="#logoutAction" style="-fx-background-color: #edb126;" text="Logout">
+               <font>
+                  <Font name="Candara Bold" size="14.0" />
+               </font>
+            </Button>
+            <Button fx:id="loginButton" alignment="CENTER" mnemonicParsing="false" onAction="#loginAction" style="-fx-background-color: #edb126;" text="Login">
+               <font>
+                  <Font name="Candara Bold" size="14.0" />
+               </font>
+            </Button>
+          <Button fx:id="createAccountButton" alignment="CENTER" mnemonicParsing="false" onAction="#createAccountAction" style="-fx-background-color: #edb126;" text="Create Account">
+               <font>
+                  <Font name="Candara Bold" size="14.0" />
+               </font>
+            </Button>
+            <ImageView fx:id="homeIcon" fitHeight="90.0" fitWidth="90.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../image/PCBuildingAppDodo.png" />
+               </image>
+            </ImageView>
+        </buttons>
+         <padding>
+            <Insets bottom="2.0" left="20.0" right="20.0" top="2.0" />
+         </padding>
+      </ButtonBar>
+   </top>
+   <left>
+      <AnchorPane prefHeight="626.0" prefWidth="300.0" style="-fx-background-color: #a3d1ff; -fx-border-color: #000000; -fx-border-width: 1;" BorderPane.alignment="CENTER">
+         <children>
+            <Label layoutX="70.0" layoutY="14.0" prefHeight="30.0" prefWidth="160.0" text="PC Build Guides">
+               <font>
+                  <Font name="Candara Bold" size="24.0" />
+               </font>
+            </Label>
+            <Text layoutX="56.0" layoutY="100.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Click below to view various PC build guides that are available! These guides consist of various types of PCs such as 'Budget' or 'Gaming'." wrappingWidth="188.7734375">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Text>
+            <Button fx:id="viewBuildGuideButton" alignment="CENTER" layoutX="75.0" layoutY="286.0" mnemonicParsing="false" onAction="#viewBuildGuideAction" prefHeight="50.0" prefWidth="150.0" style="-fx-background-color: #edb126;" text="View PC Build Guides">
+               <font>
+                  <Font name="Candara Bold" size="14.0" />
+               </font>
+            </Button>
+         </children>
+      </AnchorPane>
+   </left>
+   <right>
+      <AnchorPane prefHeight="626.0" prefWidth="300.0" style="-fx-background-color: #a3d1ff; -fx-border-color: #000000; -fx-border-width: 1;" BorderPane.alignment="CENTER">
+         <children>
+            <Label layoutX="70.0" layoutY="14.0" prefHeight="30.0" prefWidth="160.0" text="PC Build Lists">
+               <font>
+                  <Font name="Candara Bold" size="24.0" />
+               </font>
+            </Label>
+            <Text layoutX="56.0" layoutY="93.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Click below to create a PC build list! PC build lists allow you to select various parts available in the app into one place. Lists also allow you to find compatibility issues with parts, as well as view a total price value of the whole list." wrappingWidth="188.7734375">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Text>
+            <Button fx:id="createBuildListButton" alignment="CENTER" layoutX="75.0" layoutY="288.0" mnemonicParsing="false" onAction="#createBuildListAction" prefHeight="50.0" prefWidth="150.0" style="-fx-background-color: #edb126;" text="Create a PC Build List">
+               <font>
+                  <Font name="Candara Bold" size="14.0" />
+               </font>
+            </Button>
+            <Button fx:id="loadBuildListButton1" alignment="CENTER" layoutX="75.0" layoutY="377.0" mnemonicParsing="false" onAction="#loadBuildListAction" prefHeight="50.0" prefWidth="150.0" style="-fx-background-color: #edb126;" text="Load a PC Build List">
+               <font>
+                  <Font name="Candara Bold" size="14.0" />
+               </font>
+            </Button>
+            <ComboBox fx:id="buildListComboBox" layoutX="75.0" layoutY="427.0" prefHeight="25.0" prefWidth="150.0" />
+         </children>
+      </AnchorPane>
+   </right>
+   <bottom>
+      <AnchorPane prefHeight="30.0" prefWidth="1280.0" style="-fx-background-color: #2d77c2; -fx-border-color: #000000; -fx-border-width: 1;" BorderPane.alignment="CENTER">
+         <children>
+            <Label fx:id="errorLabel" alignment="BASELINE_CENTER" contentDisplay="CENTER" layoutX="15.0" maxHeight="30.0" maxWidth="1250.0" minHeight="30.0" minWidth="1250.0" prefHeight="30.0" prefWidth="1250.0" style="-fx-alignment: center;" textAlignment="CENTER" textFill="RED" textOverrun="CENTER_WORD_ELLIPSIS">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+   </bottom>
+   <center>
+      <AnchorPane prefHeight="356.0" prefWidth="676.0" BorderPane.alignment="CENTER">
+         <children>
+            <Button fx:id="viewPartsButton" alignment="CENTER" layoutX="86.0" layoutY="433.0" mnemonicParsing="false" onAction="#viewPartsAction" prefHeight="80.0" prefWidth="180.0" style="-fx-background-color: #edb126;" text="View PC Parts">
+               <font>
+                  <Font name="Candara Bold" size="18.0" />
+               </font>
+            </Button>
+            <Label layoutX="402.0" layoutY="48.0" text="PC Parts List">
+               <font>
+                  <Font name="Candara Bold" size="36.0" />
+               </font>
+            </Label>
+            <Text layoutX="373.0" layoutY="145.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Click below to view various PC parts in the database! These parts are what go into building an actual PC, as well as constructing PC build lists within the app." textAlignment="RIGHT" wrappingWidth="248.7734375">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Text>
+            <Text layoutX="373.0" layoutY="325.0" strokeType="OUTSIDE" strokeWidth="0.0" text="The PC parts list is curated to contain several different parts of each type. Types in clude, CPUs, Motherboards, CPU Coolers, RAM, Storage, GPUs, Power Supplies, Cases and Case Fans." textAlignment="RIGHT" wrappingWidth="248.7734375">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Text>
+            <ImageView fitHeight="281.0" fitWidth="281.0" layoutX="35.0" layoutY="91.0">
+               <image>
+                  <Image url="@../../image/PCBuildingAppExample.jpg" />
+               </image>
+            </ImageView>
+         </children>
+      </AnchorPane>
+   </center>
+</BorderPane>

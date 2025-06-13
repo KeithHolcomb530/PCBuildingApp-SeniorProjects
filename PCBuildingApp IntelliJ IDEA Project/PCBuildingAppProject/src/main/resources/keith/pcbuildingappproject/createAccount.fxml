@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane maxHeight="480.0" maxWidth="720.0" minHeight="480.0" minWidth="720.0" prefHeight="480.0" prefWidth="720.0" style="-fx-background-color: #000000; -fx-border-color: #000000; -fx-border-width: 2;" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="keith.pcbuildingappproject.CreateAccountController">
+   <left>
+      <AnchorPane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+         <children>
+            <ImageView fitHeight="480.0" fitWidth="270.0">
+               <image>
+                  <Image url="@../../image/PCBuildingAppBanner.png" />
+               </image>
+            </ImageView>
+         </children>
+      </AnchorPane>
+   </left>
+   <right>
+      <AnchorPane prefHeight="480.0" prefWidth="451.0" style="-fx-background-color: #2d77c2;" BorderPane.alignment="CENTER">
+         <children>
+            <Label layoutX="68.0" layoutY="14.0" text="Create Account" textFill="#edb126">
+               <font>
+                  <Font name="Candara Bold" size="48.0" />
+               </font>
+            </Label>
+            <Label fx:id="errorLabel" layoutX="6.0" layoutY="83.0" prefHeight="30.0" prefWidth="440.0" style="-fx-alignment: center;" textAlignment="CENTER" textFill="RED">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <Label alignment="CENTER_RIGHT" layoutX="32.0" layoutY="141.0" prefHeight="35.0" prefWidth="150.0" text="Username:" textAlignment="RIGHT" textFill="#edb126">
+               <font>
+                  <Font size="24.0" />
+               </font>
+            </Label>
+            <Label alignment="CENTER_RIGHT" layoutX="32.0" layoutY="240.0" prefHeight="35.0" prefWidth="150.0" text="Password:" textFill="#edb126">
+               <font>
+                  <Font size="24.0" />
+               </font>
+            </Label>
+            <Label alignment="CENTER_RIGHT" layoutX="32.0" layoutY="286.0" prefHeight="35.0" prefWidth="150.0" text="Password:" textAlignment="RIGHT" textFill="#edb126">
+               <font>
+                  <Font size="24.0" />
+               </font>
+            </Label>
+            <TextField fx:id="usernameField" layoutX="226.0" layoutY="141.0" prefHeight="35.0" prefWidth="180.0" promptText="Enter a username" />
+            <PasswordField fx:id="passwordField" layoutX="226.0" layoutY="240.0" prefHeight="35.0" prefWidth="180.0" promptText="Enter a password" />
+            <PasswordField fx:id="passwordConfirmField" layoutX="226.0" layoutY="286.0" prefHeight="35.0" prefWidth="180.0" promptText="Re-enter the password" />
+            <Button fx:id="createAccountButton" layoutX="148.0" layoutY="372.0" mnemonicParsing="false" onAction="#createAccountAction" prefHeight="50.0" prefWidth="150.0" style="-fx-background-color: #edb126;" text="Create Account">
+               <font>
+                  <Font name="Candara Bold" size="14.0" />
+               </font>
+            </Button>
+         </children>
+      </AnchorPane>
+   </right>
+</BorderPane>
