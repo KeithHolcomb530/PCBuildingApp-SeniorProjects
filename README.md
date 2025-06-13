@@ -16,9 +16,9 @@ Design documentation includes several documents:
     - Some adjustments were made as neccessary in this Agile project format.
 
   The System Controls & Security Document.
-  - Specifies the design for various user-input/interaction controls.
-  - Specifies the basics of data security for the project.
-  - Includes design for Integrity & Security controls in detail.
+    - Specifies the design for various user-input/interaction controls.
+    - Specifies the basics of data security for the project.
+    - Includes design for Integrity & Security controls in detail.
   
   The Functionality, Usability, Reliability, Performance, Supportability Plus (FURPS+) Document.
     - Separates the functional and non-functional requirements of the project.
