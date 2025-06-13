@@ -1,4 +1,4 @@
-# This is my "PC Building App" project repository.
+# My "PC Building App" Project Repository
 
 The "PC Building App" project is a Java-based project that allows the user to create and discover 'PC Build Lists' which can contain computer parts for building a PC.
 The project utilizes JavaFX to create the user interfaces, as well as a PostgreSQL database to manage and store user-created accounts, 'PC Build Lists', as well as all the various computer parts that users can put into their 'PC Build Lists'.
@@ -10,7 +10,7 @@ The repository also includes the final report written on this project.
 The final report can be found within the main repository folder.
 Note that the final report is rather lengthy.
 
-## Design documentation includes several documents:
+## Design Documentation:
   
   *The Vision Document.*
   - Shows what was envisioned for the project from the very beginning.
