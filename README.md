@@ -1,4 +1,4 @@
-This is my "PC Building App" project repository.
+# This is my "PC Building App" project repository.
 
 The "PC Building App" project is a Java-based project that allows the user to create and discover 'PC Build Lists' which can contain computer parts for building a PC.
 The project utilizes JavaFX to create the user interfaces, as well as a PostgreSQL database to manage and store user-created accounts, 'PC Build Lists', as well as all the various computer parts that users can put into their 'PC Build Lists'.
@@ -11,22 +11,22 @@ The final report can be found within the main repository folder.
 Note that the final report is rather lengthy.
 
 Design documentation includes several documents:
-  The Vision Document.
+  *The Vision Document.*
   - Shows what was envisioned for the project from the very beginning.
   - Some adjustments were made as neccessary in this Agile project format.
 
-  The System Controls & Security Document.
+  *The System Controls & Security Document.*
   - Specifies the design for various user-input/interaction controls.
   - Specifies the basics of data security for the project.
   - Includes design for Integrity & Security controls in detail.
   
-  The Functionality, Usability, Reliability, Performance, Supportability Plus (FURPS+) Document.
+  *The Functionality, Usability, Reliability, Performance, Supportability Plus (FURPS+) Document.*
   - Separates the functional and non-functional requirements of the project.
   - Includes Design Constraints to ensure the project was completed on-time.
   - Includes Implementation notes to decide on programming languages / database choices.
   - Includes Interface notes on the use of JavaFX for user interface design.
 
-  The Design & Diagrams Excel Document.
+  *The Design & Diagrams Excel Document.*
   - Shows all the diagrams used throughout the design process.
   - Includes a Use Case Diagram.
   - Includes a Use Case Table with Detailed Descriptions.
