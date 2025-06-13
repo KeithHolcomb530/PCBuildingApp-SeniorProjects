@@ -10,7 +10,8 @@ The repository also includes the final report written on this project.
 The final report can be found within the main repository folder.
 Note that the final report is rather lengthy.
 
-Design documentation includes several documents:
+## Design documentation includes several documents:
+  
   *The Vision Document.*
   - Shows what was envisioned for the project from the very beginning.
   - Some adjustments were made as neccessary in this Agile project format.
