@@ -1,0 +1,57 @@
+--------------------
+Name: Keith Holcomb
+Date: May 5th, 2025
+Project: PC Building App
+Course: CISS:451 - Senior Projects 001
+Description: PC Building App application instructions.
+	These instructions highlight how to open the project in the IntelliJ IDE,
+	as well as how to view the code/files I created for the project, and how to start the application.
+--------------------
+
+
+
+The included folder, named "PCBuildingAppProject" is the entire PC Building App IntelliJ IDE project.
+All that is required is the latest installation of the community IntelliJ IDEA.
+
+
+
+----- OPENING THE PROJECT -----
+Opening the project simply requires to open IntelliJ and open a project.
+When opening a project, select the entire folder named "PCBuildingAppProject".
+A popup may show up stating the project needs permissions, go ahead and accept those.
+Once that is done, the Main.java should already be opened by default.
+
+
+
+----- Accessing the files I created for the project -----
+After opening the project, there should be a file heirarchy on the left of the IDE.
+In the heirarchy, the files I created are located within the main folder:
+PCBuildingAppProject
+	^ src
+		^ main
+
+Within the main folder, there are two other folders, java & resources.
+	Within the java folder there is another folder keith.pcbuildingappproject.
+		This folder contains all the Java classes and files that I created for the PC Building App.
+	
+	Within the resources folder, there are two folders, image & keith.pcbuildingappproject
+		The image folder contains all the images I used for the PC Building App.
+		
+		The keith.pcbuildingappproject folder inside the resources folder
+		has all the FXML scenes I created for the PC Building App
+
+
+
+---- STARTING THE APPLICATION -----
+To start the application, the Main.java file should already be opened.
+In the top right, go ahead and run the Main.java file.
+This should start the actual PC Building App program.
+
+If connected to the database, some login credentials to use are:
+Username: Keith123
+Password: Keith123
+This user account within the database has two pre-created PC Build Lists.
+	One of the PC Build Lists is a guide,
+	the other is a list with many compatibility errors.
+	
+

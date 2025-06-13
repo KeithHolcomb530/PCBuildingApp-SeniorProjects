@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ButtonBar?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="720.0" prefWidth="1280.0" style="-fx-border-color: #000000; -fx-border-width: 2;" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="keith.pcbuildingappproject.PCPartListController">
+   <top>
+      <ButtonBar nodeOrientation="RIGHT_TO_LEFT" prefHeight="71.0" prefWidth="1280.0" style="-fx-background-color: #2d77c2; -fx-border-color: #000000; -fx-border-width: 1;" BorderPane.alignment="TOP_CENTER">
+        <buttons>
+            <Button fx:id="logoutButton" alignment="CENTER" mnemonicParsing="false" onAction="#logoutAction" style="-fx-background-color: #edb126;" text="Logout">
+               <font>
+                  <Font name="Candara Bold" size="14.0" />
+               </font>
+            </Button>
+            <Button fx:id="loginButton" alignment="CENTER" mnemonicParsing="false" onAction="#loginAction" style="-fx-background-color: #edb126;" text="Login">
+               <font>
+                  <Font name="Candara Bold" size="14.0" />
+               </font>
+            </Button>
+          <Button fx:id="createAccountButton" alignment="CENTER" mnemonicParsing="false" onAction="#createAccountAction" style="-fx-background-color: #edb126;" text="Create Account">
+               <font>
+                  <Font name="Candara Bold" size="14.0" />
+               </font>
+            </Button>
+            <ImageView fx:id="homeIcon" fitHeight="90.0" fitWidth="90.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../image/PCBuildingAppDodo.png" />
+               </image>
+            </ImageView>
+        </buttons>
+         <padding>
+            <Insets bottom="2.0" left="20.0" right="20.0" top="2.0" />
+         </padding>
+      </ButtonBar>
+   </top>
+   <left>
+      <AnchorPane prefHeight="588.0" prefWidth="25.0" style="-fx-background-color: #a3d1ff; -fx-border-color: #000000; -fx-border-width: 1;" BorderPane.alignment="CENTER" />
+   </left>
+   <right>
+      <AnchorPane prefHeight="588.0" prefWidth="175.0" style="-fx-background-color: #a3d1ff; -fx-border-color: #000000; -fx-border-width: 1;" BorderPane.alignment="CENTER">
+         <children>
+            <Button fx:id="compareButton" alignment="CENTER" layoutX="28.0" layoutY="14.0" mnemonicParsing="false" onAction="#compareAction" prefHeight="50.0" prefWidth="120.0" style="-fx-background-color: #edb126;" text="Compare Parts">
+               <font>
+                  <Font name="Candara Bold" size="12.0" />
+               </font>
+            </Button>
+            <Button fx:id="addToListButton" alignment="CENTER" layoutX="28.0" layoutY="232.0" mnemonicParsing="false" onAction="#addToListAction" prefHeight="50.0" prefWidth="120.0" style="-fx-background-color: #edb126;" text="Add to Build List">
+               <font>
+                  <Font name="Candara Bold" size="12.0" />
+               </font>
+            </Button>
+            <Text layoutX="22.0" layoutY="77.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-text-alignment: center;" text="Select different PC Parts and press the 'Compare Parts' button to compare parts. Note that the PC Parts must be of the same type to be comparable." wrappingWidth="132.13671875" />
+            <Button fx:id="mainMenuButton" alignment="CENTER" layoutX="28.0" layoutY="524.0" mnemonicParsing="false" onAction="#mainMenuAction" prefHeight="50.0" prefWidth="120.0" style="-fx-background-color: #edb126;" text="Main Menu">
+               <font>
+                  <Font name="Candara Bold" size="12.0" />
+               </font>
+            </Button>
+            <ComboBox fx:id="buildListComboBox" layoutX="28.0" layoutY="282.0" prefHeight="25.0" prefWidth="120.0" promptText="Which List..." />
+            <Button fx:id="returnBuildListButton" alignment="CENTER" layoutX="28.0" layoutY="307.0" mnemonicParsing="false" onAction="#returnToListAction" prefHeight="50.0" prefWidth="120.0" style="-fx-background-color: #edb126;" text="Load PC Build List">
+               <font>
+                  <Font name="Candara Bold" size="12.0" />
+               </font>
+            </Button>
+         </children></AnchorPane>
+   </right>
+   <bottom>
+      <AnchorPane prefHeight="30.0" prefWidth="1280.0" style="-fx-background-color: #2d77c2; -fx-border-color: #000000; -fx-border-width: 1;" BorderPane.alignment="CENTER">
+         <children>
+            <Label fx:id="errorLabel" alignment="BASELINE_CENTER" contentDisplay="CENTER" layoutX="15.0" maxHeight="30.0" maxWidth="1250.0" minHeight="30.0" minWidth="1250.0" prefHeight="30.0" prefWidth="1250.0" style="-fx-alignment: center;" textAlignment="CENTER" textFill="RED" textOverrun="CENTER_WORD_ELLIPSIS">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+   </bottom>
+   <center>
+      <AnchorPane fx:id="partsAnchorPane" prefHeight="356.0" prefWidth="676.0" BorderPane.alignment="CENTER">
+         <children>
+            <ScrollPane fx:id="partsScrollPane" layoutX="1.0" layoutY="28.0" maxHeight="560.0" maxWidth="1075.0" minHeight="560.0" minWidth="1075.0" prefHeight="560.0" prefWidth="1075.0" style="-fx-alignment: center;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="1.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="28.0" />
+            <TextField fx:id="searchBar" layoutX="1.0" layoutY="2.0" prefHeight="25.0" prefWidth="600.0" promptText="Enter keywords to filter the catalogue..." style="-fx-alignment: center;" />
+         </children>
+      </AnchorPane>
+   </center>
+</BorderPane>
